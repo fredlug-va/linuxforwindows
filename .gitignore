@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Generated output
+slides.html
+slides.pdf
+slides.pptx
+
+# Prior art (source material, not part of repo)
+prior art/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
