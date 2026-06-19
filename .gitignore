@@ -2,6 +2,7 @@
 node_modules/
 
 # Generated output
+slides-build.md
 slides.html
 slides.pdf
 slides.pptx

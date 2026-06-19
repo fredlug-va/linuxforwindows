@@ -459,7 +459,9 @@ We meet every 4th Saturday of the month
 ### Howell Branch Library · Stafford, VA
 
 - Events: https://heylo.group/fredlug
-- Mailinglist: https://lists.firemountain.net/mailman/listinfo/fredlug 
+- Mailinglist: https://lists.firemountain.net/mailman/listinfo/fredlug
+
+<div class="footnote">v{{VERSION}} - https://github.com/fredlug-va/linuxforwindows</div>
 
 ---
 <!-- _class: lead invert -->
