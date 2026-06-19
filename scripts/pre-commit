@@ -1,0 +1,4 @@
+#!/bin/sh
+# Auto-bump patch version on every commit
+npm version patch --no-git-tag-version --silent
+git add package.json package-lock.json

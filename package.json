@@ -1,8 +1,9 @@
 {
   "name": "fredlug-linux-intro-presentation",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "FREDLUG Introduction to Linux for Windows Admins - Marp presentation",
   "scripts": {
+    "prepare": "cp scripts/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
     "check:invert-class": "node scripts/ensure-invert-class.mjs --check",
     "fix:invert-class": "node scripts/ensure-invert-class.mjs --write",
     "build": "marp slides.md -o slides.html --html",
@@ -20,7 +21,7 @@
     "marp",
     "fredlug"
   ],
-  "author": "Peter Larsen",
+  "author": "Peter Larsen And Claud AI",
   "license": "MIT",
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3"
