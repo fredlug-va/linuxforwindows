@@ -745,6 +745,7 @@ section.ascii pre code { font-size: 1.4em; }
 ```
 
 No `C:\`, no `D:\` — **one tree, everything attached to it**
+
 <!--
 Windows: C:\ is your system drive, D:\ might be a data drive, E:\ might be a USB stick.
 Linux: there is only one tree. Additional drives are "mounted" as directories inside it.
@@ -752,7 +753,7 @@ Linux: there is only one tree. Additional drives are "mounted" as directories in
 /usr/bin is where installed programs live — like C:\Windows\System32 or C:\Program Files.
 Admins who manage Windows file servers: think of it like DFS — one namespace, multiple physical locations underneath.
 -->
-```
+
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Mental Model' -->
