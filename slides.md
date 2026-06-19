@@ -881,7 +881,7 @@ $ ls -l /etc/hosts
 #  owner: rw-   group: r--   other: r--
 
 chmod u+x myscript.sh       # give owner execute
-chmod g+rw,o-rwx report.txt # group read+write, others nothing
+chmod g+rw,o= report.txt # group read+write, others nothing
 chmod a+r public.html        # everyone can read  (a = all)
 chown peter:staff myfile.txt # change owner and group
 ```
