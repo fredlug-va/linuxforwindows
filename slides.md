@@ -870,6 +870,34 @@ File permissions: Windows has NTFS ACLs with complex inheritance. Linux uses a s
 -->
 
 ---
+<!-- _header: 'FREDLUG | Linux Intro | Mental Model' -->
+
+## File Permissions: The Basics
+
+```bash
+$ ls -l /etc/hosts
+-rw-r--r--. 1 root root 224 Jan 10 08:00 /etc/hosts
+#  ^^^  ^^^
+#  owner: rw-   group: r--   other: r--
+
+chmod u+x myscript.sh       # give owner execute
+chmod g+rw,o-rwx report.txt # group read+write, others nothing
+chmod a+r public.html        # everyone can read  (a = all)
+chown peter:staff myfile.txt # change owner and group
+```
+
+There's a lot more — ACLs, SELinux, capabilities — but `chmod` gets you through most days.
+<!--
+Windows equivalent: right-click → Properties → Security → Advanced → ACL entries.
+Linux's basic model: every file has owner (u), group (g), and other (o). Each gets read/write/execute.
+Symbols: u=user/owner, g=group, o=other, a=all. Operators: + adds, - removes, = sets exactly.
+Octal shorthand also works (chmod 644, chmod 755) — you'll see it in docs and scripts, but the symbolic form is clearer.
+644 = u+rw,g=r,o=r. 755 = u+rwx,g=rx,o=rx.
+The dot after permissions (rw-r--r--.) means SELinux context is set — don't worry about it yet.
+If something is "permission denied" and permissions look right: check ownership first, then SELinux.
+-->
+
+---
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
@@ -894,59 +922,6 @@ In Windows, you'd have to open Event Viewer separately and filter by the service
 systemd startup types: enabled = Automatic, disabled = Disabled (but can be started manually).
 -->
 
----
-<!-- _header: 'FREDLUG | Linux Intro | Services' -->
-
-## Essential `systemctl` Commands
-
-```bash
-systemctl status sshd           # Is SSH running? (like checking Services)
-systemctl start httpd           # Start Apache now
-systemctl stop httpd            # Stop it
-systemctl restart httpd         # Bounce it
-systemctl enable httpd          # Start at boot (like "Automatic" startup)
-systemctl disable httpd         # Don't start at boot
-systemctl enable --now httpd    # Enable AND start in one step
-```
-
-One tool. Consistent syntax. Windows has `sc.exe`, `net start/stop`, and PowerShell — all doing the same thing differently.
-
-<!--
-Windows does have CLI options — three of them, with inconsistent syntax:
-- sc.exe: sc start <svc> / sc stop <svc> / sc config <svc> start= auto
-- net commands: net start <svc> / net stop <svc>
-- PowerShell: Start-Service / Stop-Service / Restart-Service / Set-Service
-
-The real difference isn't "no CLI" — it's one unified tool vs. three fragmented ones.
-Also: "systemctl status" shows recent log output inline. None of the Windows CLI tools do that.
-Note: sudo is needed to start/stop/enable system services.
--->
-
----
-<!-- _header: 'FREDLUG | Linux Intro | Services' -->
-
-## Managing a Web Server — Live Example
-
-```bash
-# Is Apache installed and running?
-systemctl status httpd
-
-# Install it if not (one command — no download, no wizard)
-sudo dnf install -y httpd
-
-# Start it and set it to run on boot
-sudo systemctl enable --now httpd
-
-# Check it's alive
-curl http://localhost
-```
-
-<!--
-Windows equivalent: installing IIS through Server Manager → Add Roles and Features → Web Server (IIS) — a multi-step wizard.
-On Linux: one command installs Apache, one command starts it and sets it to autostart.
-"httpd" is the Apache web server — equivalent to IIS on Windows.
-curl http://localhost confirms the web server is serving pages — same as opening a browser to localhost.
--->
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Services' -->
@@ -976,6 +951,10 @@ This is one of those moments where Linux is genuinely better, not just different
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Services' -->
 <!-- _class: invert conf-table -->
+<style scoped>
+section.conf-table table { font-size: 0.65em; }
+section.conf-table p { font-size: 0.72em; margin-top: 0.4em; }
+</style>
 
 ## Services: Windows vs Linux
 
@@ -984,17 +963,23 @@ This is one of those moments where Linux is genuinely better, not just different
 | Start service | `systemctl start <name>` |
 | Stop service | `systemctl stop <name>` |
 | Restart service | `systemctl restart <name>` |
-| Set to Automatic | `systemctl enable <name>` |
 | Set to Disabled | `systemctl disable <name>` |
+| Auto-start at boot + start now | `systemctl enable --now <name>` |
 | View service status | `systemctl status <name>` |
 | List all services | `systemctl list-units --type=service` |
 
+One tool. Consistent syntax. Windows has `sc.exe`, `net start/stop`, and PowerShell — all doing the same thing differently.
 
 <!--
 Reference slide — give the audience a moment to photograph this.
 The service name in Linux is usually the package name: sshd, httpd, firewalld, NetworkManager.
 On Windows, service names are often cryptic (wuauserv = Windows Update, spooler = Print Spooler).
 Linux service names are generally human-readable.
+Windows CLI options — three of them, inconsistent syntax:
+- sc.exe: sc start <svc> / sc stop <svc> / sc config <svc> start= auto
+- net commands: net start <svc> / net stop <svc>
+- PowerShell: Start-Service / Stop-Service / Restart-Service / Set-Service
+"systemctl status" shows recent log output inline — none of the Windows CLI tools do that.
 -->
 
 ---
@@ -1061,31 +1046,6 @@ Windows Event Viewer mapping:
 Key advantage: all of this is one command with flags vs. clicking through multiple dialog boxes.
 You can also pipe journalctl output to grep for further filtering — Event Viewer has no equivalent.
 -->
-
----
-<!-- _header: 'FREDLUG | Linux Intro | Logs' -->
-
-## Hardware Logs: `dmesg`
-
-```bash
-# All kernel messages since boot (hardware detection, driver errors)
-dmesg
-
-# Watch for new hardware events live
-dmesg -w
-
-# Just errors
-dmesg --level=err,crit
-```
-
-When a USB drive misbehaves or a NIC drops — **this is where you look first**.
-<!--
-Windows equivalent: Device Manager events, or Event Viewer → System log filtered by source "disk" or "kernel-pnp".
-dmesg is much faster to get to and easier to read.
-Real-world use: plug in a USB drive, run "dmesg | tail" — you see exactly what the kernel saw, including errors.
-Disk errors appear here before they show up in SMART data — dmesg is often the first warning.
--->
-
 
 ---
 <!-- _paginate: false -->
@@ -1428,7 +1388,7 @@ For Windows admins: the practical test is "can I play the games I already own?" 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | sudo & SSH' -->
 
-## `sudo`: The Linux UAC (But Smarter)
+## `sudo`: Your First Tool for Elevated Access
 
 - Regular users **cannot** damage the system
 - `sudo` grants temporary elevated privileges — per command
@@ -1441,13 +1401,11 @@ sudo -i                         # Open a root shell (use sparingly)
 sudo !!                         # Re-run last command as root 😅
 ```
 <!--
-UAC = User Account Control — the Windows "Do you want to allow this app to make changes?" dialog.
 sudo = "superuser do" — runs one command with root privileges, then drops back to normal user.
-Key differences from UAC:
-- UAC is a yes/no dialog box. sudo requires your own password.
-- UAC is often blindly clicked through. sudo makes you think about what you're doing.
-- sudo logs everything to journald. UAC has no audit log for what the user did after clicking Yes.
-- sudo can restrict specific users to specific commands — finer-grained than Windows local admin.
+It's the practical tool you'll use on most Linux servers (including Ansible) — not the whole security story.
+Linux's actual security model goes much deeper: SELinux, polkit, capabilities, namespaces — but sudo is where you start.
+Unlike Windows domain admin ("everything on the network is yours"), sudo is per-command and logged.
+sudo can restrict specific users to specific commands — finer-grained than Windows local admin.
 "sudo !!" re-runs the previous command with sudo — for when you forget to type sudo first.
 -->
 
@@ -1518,34 +1476,6 @@ Private key = your ID card. Public key = the list of authorized cards on the ser
 "ssh-copy-id" is the Linux equivalent of exporting your certificate and importing it on the remote machine — one command.
 ed25519 is the modern key algorithm — more secure and faster than older RSA. Always use ed25519 for new keys.
 Ansible uses SSH keys exclusively for connecting to managed hosts — this is why key setup matters for automation.
--->
-
----
-<!-- _header: 'FREDLUG | Linux Intro | sudo & SSH' -->
-
-## SSH Superpowers
-
-```bash
-# Run a single command remotely without an interactive session
-ssh peter@server "df -h"
-
-# Tunnel: access a web server behind a firewall
-# (port 8080 on your laptop → port 80 on internalserver)
-ssh -L 8080:internalserver:80 bastion.example.com
-
-# Copy files securely (like robocopy, but encrypted)
-scp myfile.txt peter@server:/home/peter/
-rsync -avz ./configs/ peter@server:/etc/myapp/
-```
-
-<!--
-Windows equivalents:
-- "ssh server command" → psexec \\server command (but SSH doesn't need admin shares or WMI)
-- SSH tunnel → Windows port forwarding with netsh, or a VPN — SSH tunneling is simpler, needs no VPN infrastructure
-- scp → robocopy/xcopy, but encrypted. Works over the internet without a VPN.
-- rsync → robocopy with /MIR flag — syncs only changed files, much faster for large directories.
-SSH tunneling: "ssh -L 8080:internalserver:80 bastion" means browsing http://localhost:8080 transparently reaches the internal server.
-Ansible under the hood: every playbook run is SSH + Python. Understanding SSH is foundational to automation.
 -->
 
 ---
