@@ -422,10 +422,12 @@ section.two-col .two-col-layout.conf-options-blocks pre {
 <style scoped>
 section {
   background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url(images/fredlug-banner.png);
-  background-size: cover;
-  background-position: center;
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url(images/fredlug-banner.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 345px;
 }
 h1 {
   color: #FFD700;
@@ -451,14 +453,13 @@ a {
 </style>
 
 # Welcome to FREDLUG!
-## Fredericksburg Linux Users Group
-
 **June 2026**
 
 We meet every 4th Saturday of the month
-### Howel Branch Library · Stafford, VA
+### Howell Branch Library · Stafford, VA
 
 - Events: https://heylo.group/fredlug
+- Mailinglist: https://lists.firemountain.net/mailman/listinfo/fredlug 
 
 ---
 <!-- _class: lead invert -->
@@ -1685,9 +1686,10 @@ Common questions to anticipate:
 section {
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url(images/fredlug-banner.png);
-  background-size: cover;
+    url(images/FB-Banner.png);
+  background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 h1 { color: #FFD700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); }
 p, li { color: #FFFFFF; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); }
@@ -1695,6 +1697,8 @@ p, li { color: #FFFFFF; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); }
 
 # Thank You!
 
-**Fredericksburg Linux Users Group**
+**We are Fredericksburg Linux Users Group**
 
-heylo.group/fredlug · 4th Saturday · Howel Branch Library
+heylo.group/fredlug · 4th Saturday · Stafford Howell Branch Library - 9.30am
+
+Thank you to **Howell Branch Library** for hosting us!
