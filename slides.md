@@ -875,15 +875,15 @@ File permissions: Windows has NTFS ACLs with complex inheritance. Linux uses a s
 ## File Permissions: The Basics
 
 ```bash
-$ ls -l /etc/hosts
--rw-r--r--. 1 root root 224 Jan 10 08:00 /etc/hosts
+$ ls -la ideas-for-christmas.txt 
+-rw-r--r--. 1 peter family 158 Jun 19 15:41 ideas-for-christmas.txt
 #  ^^^  ^^^
 #  owner: rw-   group: r--   other: r--
 
 chmod u+x myscript.sh       # give owner execute
 chmod g+rw,o= report.txt # group read+write, others nothing
 chmod a+r public.html        # everyone can read  (a = all)
-chown peter:staff myfile.txt # change owner and group
+chown alice:nobody myfile.txt # change owner and group
 ```
 
 There's a lot more — ACLs, SELinux, capabilities — but `chmod` gets you through most days.
