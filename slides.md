@@ -715,10 +715,18 @@ section.conf-table table { font-size: 0.65em; }
 | Task Scheduler | `cron` / systemd timers |
 <!--
 Encourage people to photograph this slide — it's the Rosetta Stone for the rest of the talk.
-Every section from here on maps to a row in this table.
-The concepts are identical; only the names and tools differ.
-UAC = User Account Control — the "Do you want to allow this app to make changes?" dialog in Windows.
-sudo = the Linux equivalent: type your password to run one command with elevated privileges.
+Every section from here on maps to a row in this table. The concepts are identical; only the names and tools differ.
+
+Windows terms explained:
+- Services snap-in: the GUI in Server Manager / MMC for starting, stopping, and configuring Windows services.
+- Event Viewer: Windows' centralised log viewer (eventvwr.msc) — shows System, Application, Security logs.
+- ipconfig: shows IP address info. netsh: command-line network configuration tool (older, verbose).
+- winget: Microsoft's built-in package manager, added in Windows 10/11. Install apps from the command line.
+- Chocolatey: a popular THIRD-PARTY package manager for Windows that predates winget — similar idea, community-maintained repository of packages. Many shops still use it.
+- Task Manager: the GUI for seeing running processes and resource usage (Ctrl+Shift+Esc).
+- RDP / Remote Desktop: Windows' built-in remote desktop protocol — full graphical remote session.
+- UAC: User Account Control — the "Do you want to allow this app to make changes?" dialog. Introduced in Vista.
+- Task Scheduler: Windows' built-in job scheduler (taskschd.msc) — runs scripts/programs on a schedule.
 -->
 
 ---
