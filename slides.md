@@ -450,6 +450,19 @@ p, li, em, strong {
 a {
   color: #00FFFF;
 }
+li {
+  font-size: 0.75em;
+  margin: 0.1em 0;
+}
+.footnote {
+  position: absolute;
+  bottom: 18px;
+  left: 64px;
+  font-size: 0.48em;
+  opacity: 0.55;
+  color: #FFFFFF;
+  text-shadow: none;
+}
 </style>
 
 # Welcome to FREDLUG!
