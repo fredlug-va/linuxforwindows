@@ -457,11 +457,12 @@ li {
 .footnote {
   position: absolute;
   bottom: 18px;
-  left: 64px;
+  right: 64px;
   font-size: 0.48em;
   opacity: 0.55;
   color: #FFFFFF;
   text-shadow: none;
+  text-align: right;
 }
 </style>
 
