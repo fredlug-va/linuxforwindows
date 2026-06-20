@@ -589,11 +589,11 @@ Most people have been using Linux daily for years — they just didn't know it.
 
 ## Why Windows Admins Need Linux
 
-- More servers to manage → **more are Linux**
+- **Most new servers and cloud workloads run on Linux** — the market has shifted
 - Containers (Podman, Docker, Kubernetes) run on Linux
-- Automation (Ansible, Terraform) is Linux-native
+- **Every major scripting and automation tool** — Bash, Python, Ansible, Terraform — was built for Linux first
+- **Security patches ship faster** — no waiting for Patch Tuesday
 - Cloud certifications increasingly require Linux
-- It's where the interesting work is happening
 <!--
 The job market angle: Linux skills appear in most sysadmin job postings now, even for primarily Windows shops.
 Docker on Windows is still running a Linux VM underneath — you can't escape it.
