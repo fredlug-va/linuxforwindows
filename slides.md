@@ -1159,9 +1159,16 @@ No Linux experience required to join — the only requirement is curiosity.
 
 ## Questions?
 
-- Slides and resources: **heylo.group/fredlug**
+- Slides and resources: [**heylo.com/fredlug**](https://www.heylo.com/fredlug)
 - Reach me: peter@peterlarsen.org
 - Mastodon: @egoalter
+
+FredLug resources
+
+- https://www.reddit.com/r/fredlug/ (r/fredlug on reddit)
+- https://lists.firemountain.net/mailman/listinfo/fredlug (mailing list)
+- https://fredlug-va.github.io/ (web site - needs a lot of love to come up to date)
+
 
 **What would you like to explore further?**
 <!--
