@@ -492,9 +492,9 @@ We meet every 4th Saturday of the month
 - To simplify, we just talk about Fedora today
   - Please add context or ask questions about other distributions if there's interest
 - Linux and GNU are open source projects
-  - GNU founded by Richard Stallman and created what we know as Open Source
+  - GNU founded by Richard Stallman and created what we today know as Open Source (GPL)
   - Linux established by Linus Torvalds took inspiration from GNU and open sourced the kernel from day 1
-  - To gether they have punched IT into tomorrow and beyond
+  - Together they have punched IT into tomorrow and beyond
 
 <!--
 Ask the room: how many manage Windows servers? How many have touched a Linux box?
