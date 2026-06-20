@@ -485,14 +485,17 @@ We meet every 4th Saturday of the month
 
 ---
 
-## About Your Presenter
+## Linux is "just" a kernel
 
-- Peter Larsen — programmer, sysadmin, Linux evangelist
-- Using Linux since kernel 0.99b (1993)
-- Full-time Linux since ~2006 — no Windows at home
-- Works with Linux professionally (Red Hat ecosystem)
-- Runs ~50 servers in home lab — all Linux
-- Hobbies: 3D printing, IoT, retro computing, cussing at computers
+- This talk is focused on Fedora and can easily apply to all Red Hat derrived distributions
+- The wast majority discussed here, applies to a very wide spectrum of distributions
+- To simplify, we just talk about Fedora today
+  - Please add context or ask questions about other distributions if there's interest
+- Linux and GNU are open source projects
+  - GNU founded by Richard Stallman and created what we know as Open Source
+  - Linux established by Linus Torvalds took inspiration from GNU and open sourced the kernel from day 1
+  - To gether they have punched IT into tomorrow and beyond
+
 <!--
 Ask the room: how many manage Windows servers? How many have touched a Linux box?
 This helps calibrate how much Windows context to use throughout the talk.
@@ -835,7 +838,7 @@ On a headless server there's no GSettings at all — purely text files.
 
 **Case sensitivity:**
 - `Documents` ≠ `documents` ≠ `DOCUMENTS`
-- They are three different directories
+- They are different names (file or directory)
 
 **File permissions:**
 - Every file has an owner, a group, and permissions
@@ -856,10 +859,9 @@ File permissions: Windows has NTFS ACLs with complex inheritance. Linux uses a s
 ## File Permissions: The Basics
 
 ```bash
-$ ls -la ideas-for-christmas.txt 
+$ ls -l ideas-for-christmas.txt 
 -rw-r--r--. 1 peter family 158 Jun 19 15:41 ideas-for-christmas.txt
-#  ^^^  ^^^
-#  owner: rw-   group: r--   other: r--
+# owner: rw-   group: r--   other: r--
 
 chmod u+x myscript.sh         # give owner/user execute
 chmod g+rw,o= report.txt      # group read+write, others nothing
