@@ -1508,7 +1508,7 @@ systemctl status httpd
 journalctl -u httpd -n 20
 ```
 
-<div style="margin-top: 0.6em; padding: 0.4em 0.8em; background: #1e1e2e; border-left: 3px solid #00d4aa; border-radius: 4px; font-size: 0.4em;">
+<div class="footnote">
 Demo page: <a href="https://raw.githubusercontent.com/fredlug-va/linuxforwindows/main/demo-index.html" style="color:#00d4aa;">raw.githubusercontent.com/fredlug-va/linuxforwindows/main/demo-index.html</a>
 </div>
 
