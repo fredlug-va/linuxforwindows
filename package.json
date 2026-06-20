@@ -1,17 +1,17 @@
 {
   "name": "fredlug-linux-intro-presentation",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "FREDLUG Introduction to Linux for Windows Admins - Marp presentation",
   "scripts": {
     "prepare": "cp scripts/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
     "check:invert-class": "node scripts/ensure-invert-class.mjs --check",
     "fix:invert-class": "node scripts/ensure-invert-class.mjs --write",
     "prebuild": "node scripts/inject-version.mjs",
-    "build": "marp slides-build.md -o slides.html --html",
-    "build:pdf": "marp slides-build.md -o slides.pdf --allow-local-files --html",
-    "build:pptx": "marp slides-build.md -o slides.pptx --html",
-    "watch": "marp -w slides.md -o slides.html --html",
-    "serve": "marp -s slides.md --html"
+    "build": "marp slides-build.md -o slides.html --html --theme-set ./themes",
+    "build:pdf": "marp slides-build.md -o slides.pdf --allow-local-files --html --theme-set ./themes",
+    "build:pptx": "marp slides-build.md -o slides.pptx --html --theme-set ./themes",
+    "watch": "marp -w slides.md -o slides.html --html --theme-set ./themes",
+    "serve": "marp -s slides.md --html --theme-set ./themes"
   },
   "keywords": [
     "linux",
