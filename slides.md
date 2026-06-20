@@ -463,31 +463,7 @@ systemd startup types: enabled = Automatic, disabled = Disabled (but can be star
 
 
 ---
-<!-- _header: 'FREDLUG | Linux Intro | Services' -->
 
-## What's Slowing My Boot?
-
-```bash
-# How long did boot take?
-systemd-analyze
-
-# What service is the slowpoke?
-systemd-analyze blame
-
-# Visual timeline (opens in browser)
-systemd-analyze plot > boot.svg
-```
-
-The equivalent of staring at the Windows spinning circle — but with **answers**.
-<!--
-Windows has no direct equivalent for this level of boot visibility.
-Event Viewer → Windows Logs → System sorted by time is painful to work with.
-Windows "Fast Startup" hibernates the kernel — it's not a real boot and skews timing.
-systemd-analyze blame lists every service and exactly how many seconds it added to boot time.
-This is one of those moments where Linux is genuinely better, not just different.
--->
-
----
 <!-- _header: 'FREDLUG | Linux Intro | Services' -->
 <!-- _class: conf-table -->
 <style scoped>
