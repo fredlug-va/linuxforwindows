@@ -633,6 +633,24 @@ br-ex                      ovs-port       connected               ovs-port-br-ex
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Networking' -->
 
+```
+$ nmcli connection
+NAME                                UUID                                  TYPE           DEVICE       
+ovs-if-br-ex                        3766e8d0-99e1-4e41-af94-b24581aa6368  ovs-interface  br-ex        
+Wired connection 6                  d14bd72c-7dc1-314c-9ff8-1b63ab83c59a  ethernet       eno6         
+eno5.20                             64e097c0-9680-424b-8d34-f5e89ba0efa9  vlan           eno5.20      
+Wired connection 1-slave-ovs-clone  d4f0528b-ab9a-457c-affd-99614cff8aa5  ethernet       eno1         
+Wired connection 2-slave-ovs-clone  83f5bb7f-1875-4978-a750-434f1f0ad3f4  ethernet       eno2         
+br-ex                               bffeca5e-375c-4bb1-8ede-4247c404e7fd  ovs-bridge     br-ex        
+eno5                                da23742b-19c2-42d3-b62b-385ca3e2d7bf  ethernet       eno5         
+ovs-if-phys0                        1ad9d7bf-2533-4fa9-a87c-6caa6a523701  bond           bond0        
+ovs-port-br-ex                      2279d393-2bb7-44dd-b819-82ffa3feb0fd  ovs-port       br-ex        
+ovs-port-phys0                      713b5413-6665-4685-97c8-3f83744a10eb  ovs-port       bond0 
+```
+
+---
+<!-- _header: 'FREDLUG | Linux Intro | Networking' -->
+
 ## Basic Network Commands
 
 ```bash
@@ -688,6 +706,13 @@ The connection name "Wired connection 1" maps to a Windows connection profile na
 -->
 
 <div class="footnote">Interface names like enp1s0 are predictable — "en" = ethernet, "p1" = PCI bus 1, "s0" = slot 0</div>
+
+---
+<!-- _header: 'FREDLUG | Linux Intro | Networking' -->
+
+## Or using the GUI - same system, easy
+
+![h:500](images/networkmanager-gui.png)
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Networking' -->
