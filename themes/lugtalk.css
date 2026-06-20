@@ -328,7 +328,8 @@ section.two-col .two-col-layout.arch-layout .arch-text {
   text-align: left;
 }
 
-section.two-col .two-col-layout.arch-layout .arch-text > ul {
+section.two-col .two-col-layout.arch-layout .arch-text > ul,
+section.two-col .two-col-layout.arch-layout .arch-text > pre {
   width: 100%;
 }
 

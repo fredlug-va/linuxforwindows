@@ -170,7 +170,7 @@ RHCSA/RHCE certifications are highly valued and well-paying.
 <!-- _header: 'FREDLUG | Linux Intro | Getting Linux' -->
 <!-- _class: fit-image -->
 
-## Installing Linux ... in 1998
+## Installing Linux ... in 1995
 <!--
 This is what people remember and why they think Linux is hard.
 Multiple floppy disks, manually selecting kernel modules, hand-editing config files just to get X11 working.
@@ -320,6 +320,9 @@ Admins who manage Windows file servers: think of it like DFS — one namespace, 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Mental Model' -->
 <!-- _class: two-col -->
+<style scoped>
+.two-col-layout.arch-layout { grid-template-columns: 54% 44%; }
+</style>
 
 ## Adding Disks: Mount Points, Not Drive Letters
 
@@ -338,9 +341,8 @@ mkfs.xfs /dev/sdb       # 1. Format it
 mkdir /data             # 2. Create mount point
 mount /dev/sdb /data    # 3. Attach to the tree
 
-# Survive a reboot:
-echo "/dev/sdb /data xfs defaults 0 0" \
-  >> /etc/fstab
+# Survive a reboot — add to /etc/fstab:
+echo "/dev/sdb /data xfs defaults 0 0" >> /etc/fstab
 ```
 
 </div>
@@ -356,7 +358,7 @@ Windows equivalent: Disk Management (diskmgmt.msc) → right-click unallocated �
 On Linux there's no drive letter to fight over, no wizard, no reboot required.
 The mount point is just a directory — /data, /backup, /mnt/nas — you name it whatever makes sense.
 lsblk is the Linux equivalent of the disk list in Disk Management — shows all block devices, their sizes, and what's mounted where.
-/etc/fstab = the Linux equivalent of "this drive should always appear" — it's what makes mounts survive reboots.
+/etc/fstab is read by systemd at boot via systemd-fstab-generator — it auto-creates .mount units from it. Still the simplest and most universal way to make mounts persist.
 DFS analogy: Linux admins who manage file servers think of this exactly like DFS namespaces — one path, multiple physical locations underneath.
 USB drives: modern Linux (with udisks2) mounts them automatically under /media/username/label — same as Windows Explorer auto-mounting to a drive letter.
 -->
