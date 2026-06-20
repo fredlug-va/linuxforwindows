@@ -1512,7 +1512,6 @@ journalctl -u httpd -n 20
 Demo page: <a href="https://raw.githubusercontent.com/fredlug-va/linuxforwindows/main/demo-index.html" style="color:#00d4aa;">raw.githubusercontent.com/fredlug-va/linuxforwindows/main/demo-index.html</a>
 </div>
 
-
 <!--
 Windows equivalent walkthrough — so the audience can follow along:
 1. dnf install httpd → Server Manager → Add Roles → Web Server (IIS) → wizard → possibly reboot
