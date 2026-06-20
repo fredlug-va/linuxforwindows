@@ -595,6 +595,44 @@ Cockpit is a web-based admin panel (like a lightweight web Server Manager) — c
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Networking' -->
 
+## What's what?
+
+```
+$ ip address | grep eno
+2: eno1: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master bond0 state UP group default qlen 1000
+3: eno5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000
+4: eno2: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master bond0 state UP group default qlen 1000
+5: eno3: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+6: eno6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+7: eno4: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+8: eno7: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+9: eno8: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+15: eno5.20@eno5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc noqueue state UP group default qlen 1000
+    inet 192.168.20.81/24 brd 192.168.20.255 scope global noprefixroute eno5.20
+``` 
+
+---
+<!-- _header: 'FREDLUG | Linux Intro | Networking' -->
+## NetworkManager is user friendly
+
+```
+$ nmcli device
+DEVICE                     TYPE           STATE                   CONNECTION                       
+br-ex                      ovs-interface  connected               ovs-if-br-ex                     
+eno6                       ethernet       connected               Wired connection 6                 
+eno5.20                    vlan           connected               eno5.20                            
+bond0                      bond           connected               ovs-if-phys0                     
+eno1                       ethernet       connected               Wired connection 1-slave-ovs-clone 
+eno2                       ethernet       connected               Wired connection 2-slave-ovs-clone 
+eno5                       ethernet       connected               eno5                             
+br-ex                      ovs-bridge     connected               br-ex                            
+bond0                      ovs-port       connected               ovs-port-phys0                   
+br-ex                      ovs-port       connected               ovs-port-br-ex 
+```
+
+---
+<!-- _header: 'FREDLUG | Linux Intro | Networking' -->
+
 ## Basic Network Commands
 
 ```bash
