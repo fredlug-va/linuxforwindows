@@ -545,32 +545,13 @@ The goal is not to make them Linux experts today — it's to remove the fear.
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Why Care?' -->
 
-## Linux is Already Running Your World
-
-- **3 billion+** Android devices = Linux kernel
-- **Top 500** supercomputers: 100% Linux
-- **AWS, Azure, GCP** — all built on Linux
-- **90%+** of public cloud workloads run Linux
-- The internet's infrastructure: Linux
-<!--
-Key point for Windows admins: even Azure — Microsoft's own cloud — runs mostly Linux VMs.
-Microsoft is one of the largest contributors to the Linux kernel.
-If you're managing cloud infrastructure, you're already managing Linux whether you know it or not.
--->
-
-<div class="footnote">Source: Top500.org, Linux Foundation 2024 Annual Report</div>
-
----
-<!-- _header: 'FREDLUG | Linux Intro | Why Care?' -->
-
 ## The Numbers
 
-- **500 / 500** of the world's fastest supercomputers run Linux
-- **60%+ of Azure VM cores run Linux** — on Microsoft's own cloud
+- **3 billion+** Android devices run the Linux kernel
+- **500 / 500** of the world's fastest supercomputers: Linux
+- **60%+ of Azure** VM cores — on Microsoft's own cloud
 - **96%** of the world's top 1 million web servers run Linux
-- **~90%** of all public cloud workloads run Linux
 - **NYSE, London Stock Exchange, Tokyo Stock Exchange**: Linux
-- The ISS, most nuclear plant control systems: Linux
 
 You're not going into uncharted territory — you're tourist number 10 million.
 <!--
