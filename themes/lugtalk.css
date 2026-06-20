@@ -10,6 +10,9 @@
 section {
   font-size: 28px;
   padding: 75px 64px 92px 64px;
+  background-color: var(--preview-base) !important;
+  color: #f4f8ff !important;
+  color-scheme: dark;
 }
 
 section.theme-motif {

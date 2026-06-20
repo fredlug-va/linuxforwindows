@@ -2,7 +2,7 @@
 marp: true
 html: true
 theme: lugtalk
-class: invert theme-gradient-motif
+class: theme-gradient-motif
 transition: diamond
 paginate: true
 header: 'Linux for Windows Admins - FREDLUG'
@@ -15,7 +15,7 @@ title: 'FREDLUG June 2026 | Introduction to Linux for Windows Admins'
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: lead invert welcome -->
+<!-- _class: lead welcome -->
 <!-- _backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('images/fredlug-banner.jpg')" -->
 <!-- _backgroundSize: auto -->
 <!-- _backgroundPosition: top center -->
@@ -32,7 +32,7 @@ We meet every 4th Saturday of the month
 <div class="footnote">v{{VERSION}} - https://github.com/fredlug-va/linuxforwindows</div>
 
 ---
-<!-- _class: lead invert -->
+<!-- _class: lead -->
 
 # Linux for Windows Admins
 ## It's not as scary as you think
@@ -59,7 +59,7 @@ This helps calibrate how much Windows context to use throughout the talk.
 
 <!-- IMAGE: A meme or cartoon showing someone terrified at a Linux terminal -->
 <!-- Suggestion: the "It doesn't have to be like this" slide from prior presentations -->
-<!-- _class: invert fit-image -->
+<!-- _class: fit-image -->
 
 ## It doesn't have to be like this
 
@@ -95,7 +95,7 @@ The goal is not to make them Linux experts today — it's to remove the fear.
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Why Should a Windows Admin Care?
 
@@ -126,7 +126,7 @@ Good line for the audience: "Your Windows skills still matter. But the servers t
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Why Care?' -->
-<!-- _class: invert fit-image -->
+<!-- _class: fit-image -->
 
 ## You're Already Using Linux
 
@@ -162,13 +162,13 @@ RHCSA/RHCE certifications are highly valued and well-paying.
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Getting Linux
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Getting Linux' -->
-<!-- _class: invert fit-image -->
+<!-- _class: fit-image -->
 
 ## Installing Linux ... in 1998
 <!--
@@ -208,7 +208,7 @@ Great for trying Linux on hardware you're not ready to commit to.
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Getting Linux' -->
-<!-- _class: invert fit-image -->
+<!-- _class: fit-image -->
 
 ## Fedora Media Writer
 
@@ -242,13 +242,13 @@ Strongly recommend VMs over dual-boot for beginners — no risk, easy to reset, 
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # The Mental Model Shift
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Mental Model' -->
-<!-- _class: invert conf-table -->
+<!-- _class: conf-table -->
 <style scoped>
 section.conf-table table { font-size: 0.65em; }
 </style>
@@ -285,7 +285,7 @@ Windows terms explained:
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Mental Model' -->
-<!-- _class: invert ascii -->
+<!-- _class: ascii -->
 <style scoped>
 section.ascii pre { width: 90%; }
 section.ascii pre code { font-size: 1.4em; }
@@ -319,7 +319,7 @@ Admins who manage Windows file servers: think of it like DFS — one namespace, 
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Mental Model' -->
-<!-- _class: invert two-col -->
+<!-- _class: two-col -->
 
 ## Adding Disks: Mount Points, Not Drive Letters
 
@@ -438,7 +438,7 @@ If something is "permission denied" and permissions look right: check ownership 
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Services
 
@@ -487,7 +487,7 @@ This is one of those moments where Linux is genuinely better, not just different
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Services' -->
-<!-- _class: invert conf-table -->
+<!-- _class: conf-table -->
 <style scoped>
 section.conf-table table { font-size: 0.65em; }
 section.conf-table p { font-size: 0.72em; margin-top: 0.4em; }
@@ -523,7 +523,7 @@ Windows CLI options — three of them, inconsistent syntax:
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Logs
 
@@ -588,7 +588,7 @@ You can also pipe journalctl output to grep for further filtering — Event View
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Networking
 
@@ -675,7 +675,7 @@ The connection name "Wired connection 1" maps to a Windows connection profile na
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Networking' -->
-<!-- _class: invert conf-table -->
+<!-- _class: conf-table -->
 
 ## Networking: Windows vs Linux
 
@@ -699,7 +699,7 @@ netsh on Windows is notoriously hard to use — nmcli is similar in power but wi
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Software
 
@@ -763,7 +763,7 @@ Flatpak is especially useful for desktop apps that ship faster than the distro's
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Software' -->
-<!-- _class: invert conf-table -->
+<!-- _class: conf-table -->
 
 ## The Desktop is Optional
 
@@ -812,13 +812,13 @@ For admins managing end users: this is a huge reduction in support calls about m
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Steam on Linux
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Steam' -->
-<!-- _class: invert fit-image -->
+<!-- _class: fit-image -->
 
 ## Gaming on Linux Has Arrived
 
@@ -878,7 +878,7 @@ Enable path: Steam → Settings → Compatibility → ✅ Enable Steam Play for 
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | Steam' -->
-<!-- _class: invert fit-image -->
+<!-- _class: fit-image -->
 
 ## ProtonDB: Check Before You Play
 
@@ -918,7 +918,7 @@ For Windows admins: the practical test is "can I play the games I already own?" 
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Users, sudo & SSH
 
@@ -948,7 +948,7 @@ sudo can restrict specific users to specific commands — finer-grained than Win
 
 ---
 <!-- _header: 'FREDLUG | Linux Intro | sudo & SSH' -->
-<!-- _class: invert fit-image -->
+<!-- _class: fit-image -->
 
 ## The Classic sudo Moment
 
@@ -1019,7 +1019,7 @@ Ansible uses SSH keys exclusively for connecting to managed hosts — this is wh
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Live Demo
 
@@ -1087,7 +1087,7 @@ On Windows: PowerShell DSC, Group Policy, or SCCM — much more complex tooling 
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: invert section-divider -->
+<!-- _class: section-divider -->
 
 # Where to Go From Here
 
@@ -1177,7 +1177,7 @@ Common questions to anticipate:
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: lead invert -->
+<!-- _class: lead -->
 <style scoped>
 section {
   background-image:
