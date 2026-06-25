@@ -42,7 +42,7 @@ We meet every 4th Saturday of the month
 ## Linux is "just" a kernel
 
 - This talk is focused on Fedora and can easily apply to all Red Hat derrived distributions
-- The wast majority discussed here, applies to a very wide spectrum of distributions
+- The vast majority discussed here, applies to a very wide spectrum of distributions
 - To simplify, we just talk about Fedora today
   - Please add context or ask questions about other distributions if there's interest
 - Linux and GNU are open source projects
