@@ -41,7 +41,7 @@ We meet every 4th Saturday of the month
 
 ## Linux is "just" a kernel
 
-- This talk is focused on Fedora and can easily apply to all Red Hat derrived distributions
+- This talk is focused on Fedora and can easily apply to all Red Hat derived distributions
 - The vast majority discussed here, applies to a very wide spectrum of distributions
 - To simplify, we just talk about Fedora today
   - Please add context or ask questions about other distributions if there's interest
@@ -978,7 +978,7 @@ For Windows admins: the practical test is "can I play the games I already own?" 
 ```bash
 sudo systemctl restart httpd    # Run this one command as root
 sudo -i                         # Open a root shell (use sparingly)
-sudo !!                         # Re-run last command as root 😅
+sudo !!                         # Re-run last command as root
 ```
 <!--
 sudo = "superuser do" — runs one command with root privileges, then drops back to normal user.
@@ -998,7 +998,7 @@ sudo can restrict specific users to specific commands — finer-grained than Win
 <!-- IMAGE: XKCD #149 "sudo make me a sandwich" comic -->
 <!-- URL: https://xkcd.com/149/ — free to use, widely recognized -->
 
-![sudo - Make me a sandwish](https://imgs.xkcd.com/comics/sandwich.png)
+![sudo - Make me a sandwich](https://imgs.xkcd.com/comics/sandwich.png)
 
 <div class="footnote">https://xkcd.com/149/</div>
 <!--
@@ -1022,7 +1022,7 @@ Good moment to pause and let the audience appreciate the humor.
 ssh peter@192.168.1.100
 
 # Use RDP to connect to a Windows server
-rdpviewer -u user -d windowsdomain -p password windows-server-name
+rdesktop -u user -d windowsdomain -p password windows-server-name
 
 # Connect as a specific user
 ssh admin@myserver.example.com
@@ -1188,7 +1188,7 @@ RHCSA (Red Hat Certified System Administrator) is the most recognized Linux cert
 
 - **Fredericksburg Linux Users Group**
 - Meets every **4th Saturday** of the month
-- **Howel Branch Library** · Stafford, VA
+- **Howell Branch Library** · Stafford, VA
 - All skill levels welcome — beginners to greybeards
 - Bring your questions, your projects, your broken configs
 <!--
@@ -1205,7 +1205,7 @@ No Linux experience required to join — the only requirement is curiosity.
 
 ## Questions?
 
-- Slides and resources: [**heylo.com/fredlug**](https://www.heylo.com/fredlug)
+- Slides and resources: [**heylo.group/fredlug**](https://heylo.group/fredlug)
 - Reach me: peter@peterlarsen.org
 - Mastodon: @egoalter
 
@@ -1231,18 +1231,7 @@ Common questions to anticipate:
 <!-- _header: "" -->
 <!-- _footer: "" -->
 <!-- _class: lead outro -->
-<style scoped>
-section {
-  background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url(images/FB-Banner.png);
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-h1 { color: #FFD700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); }
-p, li { color: #FFFFFF; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); }
-</style>
+<!-- _backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)), url('images/FB-Banner.png')" -->
 
 # Thank You!
 

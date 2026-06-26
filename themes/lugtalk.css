@@ -512,10 +512,6 @@ section.outro .footnote {
 }
 
 section.outro {
-  background-size: auto !important;
-  background-repeat: no-repeat !important;
-  background-position: top center !important;
-  padding-top: 345px;
 }
 
 section.outro h1 {
