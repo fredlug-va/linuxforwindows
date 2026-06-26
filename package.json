@@ -1,6 +1,6 @@
 {
   "name": "fredlug-linux-intro-presentation",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "FREDLUG Introduction to Linux for Windows Admins - Marp presentation",
   "scripts": {
     "prepare": "cp scripts/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",

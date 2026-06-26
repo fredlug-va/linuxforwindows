@@ -264,10 +264,12 @@ section.conf-table table { font-size: 0.65em; }
 | `ipconfig` / `netsh` | `nmcli` / `ip addr` |
 | `winget` / Chocolatey | `dnf` / `flatpak` |
 | Task Manager | `top` / `htop` |
-| Remote Desktop (RDP) | `ssh` |
+| Remote Desktop (RDP) | `ssh` / `vnc` / `freerdp` |
 | UAC prompt | `sudo` |
 | Task Scheduler | `cron` / systemd timers |
 <!--
+Key observation - the vast majority of Linux installation (excluding cell phones and tablets) have no GUI. One of the advantages of Linux is that you do not need to load components that consumes resources if there isn't a need, and that includes a graphical interface.  This can be disabled post install, installed and enabled if you installed without a GUI, the GUI can be changed to a different look and feel etc.  Linux is choise.
+
 Encourage people to photograph this slide — it's the Rosetta Stone for the rest of the talk.
 Every section from here on maps to a row in this table. The concepts are identical; only the names and tools differ.
 
