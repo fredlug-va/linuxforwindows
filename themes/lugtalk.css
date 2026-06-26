@@ -498,7 +498,8 @@ section.welcome li {
   margin: 0.1em 0;
 }
 
-section.welcome .footnote {
+section.welcome .footnote,
+section.outro .footnote {
   position: absolute;
   left: auto;
   bottom: 18px;
@@ -508,4 +509,45 @@ section.welcome .footnote {
   color: #FFFFFF;
   text-shadow: none;
   text-align: right;
+}
+
+section.outro {
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  padding-top: 345px;
+}
+
+section.outro h1 {
+  color: #FFD700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+section.outro h2 {
+  color: #FFFF00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+section.outro h3 {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  font-size: 1.2em;
+  margin-top: 0.2em;
+}
+
+section.outro p,
+section.outro li,
+section.outro em,
+section.outro strong {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+section.outro a {
+  color: #00FFFF;
+}
+
+section.outro li {
+  font-size: 0.75em;
+  margin: 0.1em 0;
 }

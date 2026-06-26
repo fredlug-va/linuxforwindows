@@ -1227,7 +1227,7 @@ Common questions to anticipate:
 <!-- _paginate: false -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
-<!-- _class: lead -->
+<!-- _class: lead outro -->
 <style scoped>
 section {
   background-image:
@@ -1248,3 +1248,5 @@ p, li { color: #FFFFFF; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); }
 heylo.group/fredlug · 4th Saturday · Stafford Howell Branch Library - 9.30am
 
 Thank you to **Howell Branch Library** for hosting us!
+
+<div class="footnote">v{{VERSION}} - https://github.com/fredlug-va/linuxforwindows</div>
