@@ -1021,8 +1021,11 @@ Good moment to pause and let the audience appreciate the humor.
 # Connect to a server (like RDP but in the terminal)
 ssh peter@192.168.1.100
 
+# Use RDP to connect to a Windows server
+rdpviewer -u user -d windowsdomain -p password windows-server-name
+
 # Connect as a specific user
-ssh -l admin myserver.example.com
+ssh admin@myserver.example.com
 ```
 
 <!--
